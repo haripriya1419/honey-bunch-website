@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Honey Bunch Makeover Artist | Anaimalai</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --rose: #C2185B;
+  --rose-light: #E91E8C;
+  --rose-pale: #FCE4EC;
+  --blush: #F8BBD9;
+  --nude: #FFF8F6;
+  --nude2: #FDF0F5;
+  --charcoal: #1A1A2E;
+  --charcoal2: #16213E;
+  --plum: #4A0E3F;
+  --plum2: #6D1B5E;
+  --white: #FFFFFF;
+  --soft: #7B6B7A;
+  --line: #F0D6E8;
+  --gold: #D4A853;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--nude);color:var(--charcoal);-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--nude2)}
+::-webkit-scrollbar-thumb{background:var(--rose);border-radius:10px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:999;background:var(--charcoal2);display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:64px;border-bottom:1px solid #ffffff0d}
+.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--blush);text-decoration:none;display:flex;align-items:center;gap:12px;letter-spacing:.06em}
+.nav-brand .tagline{font-size:10px;font-weight:300;color:#ffffff40;letter-spacing:.2em;text-transform:uppercase;display:block;margin-top:1px}
+.nav-links{display:flex;align-items:center;gap:2.2rem}
+.nav-links a{font-size:11px;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:#ffffff60;text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--blush)}
+.nav-cta{padding:8px 22px;background:linear-gradient(135deg,var(--rose),var(--plum2));color:#fff !important;border-radius:50px;font-size:11px !important;font-weight:500 !important;letter-spacing:.1em !important;transition:opacity .2s !important}
+.nav-cta:hover{opacity:.85 !important}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:95vh;background:var(--charcoal)}
+.hero-left{display:flex;flex-direction:column;justify-content:center;padding:7rem 4rem 7rem 5.5rem;position:relative;overflow:hidden}
+.hero-left::before{content:'';position:absolute;top:-100px;left:-100px;width:500px;height:500px;background:radial-gradient(circle,#C2185B12 0%,transparent 65%);pointer-events:none}
+.hero-left::after{content:'';position:absolute;bottom:-80px;right:0;width:300px;height:300px;background:radial-gradient(circle,#E91E8C08 0%,transparent 70%);pointer-events:none}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:12px;font-size:10px;font-weight:400;letter-spacing:.25em;text-transform:uppercase;color:var(--rose-light);margin-bottom:2.2rem}
+.hero-eyebrow::before{content:'';width:32px;height:1px;background:linear-gradient(to right,var(--rose),transparent)}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(3.5rem,5.5vw,5.8rem);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:1.6rem;letter-spacing:-.01em}
+.hero h1 strong{font-weight:600;display:block}
+.hero h1 em{display:block;font-style:italic;font-weight:300;font-size:.6em;color:var(--blush);letter-spacing:.08em;margin-top:.4rem}
+.hero-desc{font-size:14px;font-weight:300;color:#ffffff55;line-height:1.9;max-width:360px;margin-bottom:3rem;letter-spacing:.02em}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-rose{display:inline-flex;align-items:center;gap:8px;padding:14px 34px;background:linear-gradient(135deg,var(--rose),var(--plum2));color:#fff;font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border-radius:50px;transition:opacity .2s,transform .15s}
+.btn-rose:hover{opacity:.88;transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:13px 32px;background:transparent;color:#ffffffaa;font-size:11px;font-weight:400;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border:1px solid #ffffff20;border-radius:50px;transition:border-color .2s,color .2s,transform .15s}
+.btn-ghost:hover{border-color:var(--blush);color:var(--blush);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:3rem;margin-top:4.5rem;padding-top:3rem;border-top:1px solid #ffffff0d}
+.hero-stat-n{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:600;color:var(--blush);line-height:1}
+.hero-stat-l{font-size:10px;color:#ffffff35;letter-spacing:.12em;text-transform:uppercase;margin-top:5px}
+
+.hero-right{position:relative;overflow:hidden}
+.hero-right img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.65) saturate(1.1)}
+.hero-right::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,var(--charcoal) 0%,transparent 40%),linear-gradient(to top,var(--charcoal) 0%,transparent 35%)}
+.hero-tag{position:absolute;bottom:2.5rem;right:2.5rem;z-index:2;background:linear-gradient(135deg,var(--rose),var(--plum2));color:#fff;padding:1.2rem 1.6rem;border-radius:4px;text-align:center}
+.hero-tag-n{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:600;line-height:1}
+.hero-tag-l{font-size:9px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;margin-top:4px;opacity:.8}
+
+/* TICKER */
+.ticker{background:linear-gradient(135deg,var(--rose),var(--plum2));overflow:hidden;padding:.65rem 0;display:flex}
+.ticker-track{display:flex;white-space:nowrap;animation:ticker 28s linear infinite}
+.ticker-item{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#fff;padding:0 2.5rem;opacity:.9}
+.ticker-dot{width:3px;height:3px;background:#fff;border-radius:50%;opacity:.5}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* SECTIONS */
+.sec{padding:6rem 0}
+.sec-inner{max-width:1180px;margin:0 auto;padding:0 2.5rem}
+.sec-label{display:inline-flex;align-items:center;gap:10px;font-size:9px;font-weight:500;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);margin-bottom:1rem}
+.sec-label::before{content:'';width:24px;height:1px;background:var(--rose)}
+.sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:300;color:var(--charcoal);line-height:1.1}
+.sec-title em{font-style:italic;color:var(--rose)}
+.sec-sub{font-size:14px;color:var(--soft);line-height:1.8;margin-top:.8rem;max-width:460px;font-weight:300}
+
+/* SERVICES */
+.sec-services{background:var(--white)}
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:0;border:1px solid var(--line)}
+.svc-card{display:flex;flex-direction:column;border-right:1px solid var(--line);transition:all .3s}
+.svc-card:last-child{border-right:none}
+.svc-card:hover{background:var(--nude)}
+.svc-img{height:280px;overflow:hidden;position:relative}
+.svc-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;filter:saturate(.9)}
+.svc-card:hover .svc-img img{transform:scale(1.08)}
+.svc-badge{position:absolute;top:0;left:0;background:linear-gradient(135deg,var(--rose),var(--plum2));color:#fff;font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:6px 16px}
+.svc-body{padding:2rem 1.8rem;flex:1;display:flex;flex-direction:column}
+.svc-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;color:var(--charcoal);margin-bottom:1.2rem}
+.svc-list{list-style:none;flex:1;margin-bottom:1.6rem}
+.svc-list li{font-size:12px;color:var(--soft);padding:5px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px;letter-spacing:.03em}
+.svc-list li:last-child{border:none}
+.svc-list li::before{content:'✦';color:var(--rose);font-size:8px;flex-shrink:0}
+.svc-list li.highlight{color:var(--rose);font-style:italic;font-weight:500}
+.svc-list li.highlight::before{content:'◆';font-size:7px}
+.svc-actions{display:flex;flex-direction:column;gap:8px}
+.btn-wa2{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:linear-gradient(135deg,var(--rose),var(--plum2));color:#fff;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:50px;transition:opacity .2s}
+.btn-wa2:hover{opacity:.85}
+.btn-call2{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px;background:transparent;color:var(--charcoal);font-size:11px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--line);border-radius:50px;transition:all .2s}
+.btn-call2:hover{border-color:var(--rose);color:var(--rose)}
+
+/* ABOUT STRIP */
+.about-strip{background:var(--charcoal2);padding:5rem 0}
+.about-inner{max-width:1180px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-img-wrap{position:relative}
+.about-img-wrap img{width:100%;height:480px;object-fit:cover;border-radius:4px;filter:brightness(.85) saturate(1.1)}
+.about-img-wrap::before{content:'';position:absolute;top:-16px;left:-16px;right:16px;bottom:16px;border:1px solid #C2185B30;border-radius:4px;z-index:-1}
+.about-img-badge{position:absolute;bottom:-20px;right:-20px;background:linear-gradient(135deg,var(--rose),var(--plum2));color:#fff;padding:1.5rem 2rem;border-radius:4px;text-align:center}
+.about-badge-n{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:600;line-height:1}
+.about-badge-l{font-size:9px;letter-spacing:.15em;text-transform:uppercase;opacity:.8;margin-top:4px}
+.about-text .sec-title{color:var(--white)}
+.about-text .sec-sub{color:#ffffff50}
+.about-list{margin-top:2rem;display:flex;flex-direction:column;gap:.8rem}
+.about-list-item{display:flex;align-items:flex-start;gap:12px;font-size:13px;color:#ffffff60;font-weight:300;line-height:1.6}
+.about-list-item::before{content:'—';color:var(--rose-light);flex-shrink:0;margin-top:2px}
+
+/* SPECIALS */
+.sec-specials{background:var(--nude2)}
+.sp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:3rem}
+.sp-card{background:var(--white);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;gap:0;transition:box-shadow .3s,transform .3s}
+.sp-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px #C2185B12}
+.sp-card-img{width:130px;flex-shrink:0;overflow:hidden}
+.sp-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.sp-card:hover .sp-card-img img{transform:scale(1.08)}
+.sp-card-body{padding:1.6rem 1.4rem;display:flex;flex-direction:column;gap:.6rem}
+.sp-icon{font-size:1.4rem;line-height:1}
+.sp-card h4{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600;color:var(--plum)}
+.sp-card p{font-size:12px;color:var(--soft);line-height:1.7;font-weight:300}
+
+/* VISIT */
+.sec-visit{background:linear-gradient(135deg,var(--rose) 0%,var(--plum) 100%);padding:5rem 0}
+.visit-inner{max-width:1180px;margin:0 auto;padding:0 2.5rem;display:grid;grid-template-columns:1fr auto;align-items:center;gap:3rem}
+.visit-inner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3rem);font-weight:300;color:#fff;line-height:1.1;margin-bottom:.8rem}
+.visit-inner h2 em{font-style:italic}
+.visit-inner p{font-size:14px;color:#ffffff70;font-weight:300;line-height:1.8;max-width:500px}
+.btn-white{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:15px 38px;background:#fff;color:var(--rose);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;border-radius:50px;transition:opacity .2s,transform .15s}
+.btn-white:hover{opacity:.9;transform:translateY(-2px)}
+
+/* CONTACT */
+.sec-contact{background:var(--white)}
+.c-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.c-card{background:var(--white);padding:2rem 1.6rem;display:flex;flex-direction:column;gap:0;transition:background .2s}
+.c-card:hover{background:var(--nude)}
+.c-ico{width:42px;height:42px;background:var(--rose-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:1.2rem}
+.c-card h4{font-size:9px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);margin-bottom:.5rem}
+.c-card p{font-size:13px;color:var(--soft);line-height:1.7;font-weight:300;margin-bottom:1.4rem;flex:1}
+.c-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 20px;font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-radius:50px;transition:opacity .2s,transform .15s}
+.c-btn:hover{opacity:.85;transform:translateY(-1px)}
+.cb-call{background:var(--charcoal);color:#fff}
+.cb-wa{background:#25D366;color:#fff}
+.cb-map{background:var(--plum);color:#fff}
+.cb-ig{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);color:#fff}
+.cb-fb{background:#1877F2;color:#fff}
+.cb-yt{background:#FF0000;color:#fff}
+
+/* FOOTER CTA */
+.footer-cta{background:var(--charcoal2);text-align:center;padding:6rem 2rem}
+.footer-cta h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:300;color:var(--white);margin-bottom:.8rem;line-height:1.1}
+.footer-cta h2 em{font-style:italic;color:var(--blush)}
+.footer-cta p{font-size:14px;color:#ffffff45;margin-bottom:2.5rem;font-weight:300;letter-spacing:.02em}
+.footer-cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+footer{background:var(--charcoal);border-top:1px solid #2a2a2a;padding:1.8rem 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--blush)}
+footer p{font-size:11px;color:#ffffff25;letter-spacing:.03em}
+footer a{color:#ffffff40;text-decoration:none;transition:color .2s}
+footer a:hover{color:var(--blush)}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-right{height:280px}
+  .hero-left{padding:4rem 2rem 3rem}
+  .hero-stats{gap:1.5rem}
+  .about-inner{grid-template-columns:1fr}
+  .about-img-wrap img{height:300px}
+  .visit-inner{grid-template-columns:1fr}
+  .nav{padding:0 1.5rem}
+  .nav-links{display:none}
+  .sec-inner{padding:0 1.5rem}
+  .sec{padding:4rem 0}
+  footer{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-brand">
+    <span style="font-size:1.6rem">🌸</span>
+    <div>Honey Bunch <span class="tagline">Makeover Artist · Anaimalai</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#specials">Specials</a>
+    <a href="#contact">Contact</a>
+    <a href="https://wa.me/918610324361?text=Hello%20Poornima!%20I%27d%20like%20to%20book%20a%20service." target="_blank" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Anaimalai · Tamil Nadu · Home Visits Available</div>
+    <h1>
+      <strong>Honey Bunch</strong>
+      Makeover Artist
+      <em>by Poornima Vignesh</em>
+    </h1>
+    <p class="hero-desc">Premium bridal, beauty, mehandi & hair services — crafted for every woman, delivered at your venue or doorstep.</p>
+    <div class="hero-btns">
+      <a href="#services" class="btn-rose">Explore Services</a>
+      <a href="https://wa.me/918610324361?text=Hello%20Poornima!%20I%27d%20like%20to%20book%20a%20service." target="_blank" class="btn-ghost">💬 WhatsApp Us</a>
+    </div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-n">50+</div><div class="hero-stat-l">Happy Brides</div></div>
+      <div><div class="hero-stat-n">4+</div><div class="hero-stat-l">Years Experience</div></div>
+      <div><div class="hero-stat-n">4</div><div class="hero-stat-l">Service Types</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1200&q=85" alt="Fashion Bridal Makeover">
+    <div class="hero-tag"><div class="hero-tag-n">🌸</div><div class="hero-tag-l">Est. Anaimalai</div></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">💍 Bridal Specialist <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🥻 Saree Prepleating <span class="ticker-dot"></span></span>
+    <span class="ticker-item">💎 Rental Jewellery <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🚗 Home & Venue Visits <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🌿 Bridal Mehandi <span class="ticker-dot"></span></span>
+    <span class="ticker-item">✨ All Types of Facial <span class="ticker-dot"></span></span>
+    <span class="ticker-item">✂️ All Hair Services <span class="ticker-dot"></span></span>
+    <span class="ticker-item">💍 Bridal Specialist <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🥻 Saree Prepleating <span class="ticker-dot"></span></span>
+    <span class="ticker-item">💎 Rental Jewellery <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🚗 Home & Venue Visits <span class="ticker-dot"></span></span>
+    <span class="ticker-item">🌿 Bridal Mehandi <span class="ticker-dot"></span></span>
+    <span class="ticker-item">✨ All Types of Facial <span class="ticker-dot"></span></span>
+    <span class="ticker-item">✂️ All Hair Services <span class="ticker-dot"></span></span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services" class="sec sec-services">
+  <div class="sec-inner">
+    <div style="margin-bottom:3.5rem">
+      <div class="sec-label">What We Offer</div>
+      <h2 class="sec-title">Our <em>Services</em></h2>
+      <p class="sec-sub">Tap WhatsApp on any service card to book instantly — available at home, hall or venue.</p>
+    </div>
+    <div class="svc-grid">
+
+      <!-- BRIDAL -->
+      <div class="svc-card">
+        <div class="svc-img">
+          <img src="https://5.imimg.com/data5/ANDROID/Default/2022/6/IK/CV/IE/15530977/prod-20220610-2213032295877915225719228-jpg-500x500.jpg" alt="Bridal Makeup">
+          <span class="svc-badge">Bridal</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title">👰 Bridal Service</div>
+          <ul class="svc-list">
+            <li>Bridal Make Up</li>
+            <li>Engagement Make Up</li>
+            <li>Baby Shower Make Up</li>
+            <li>Puberty Make Up</li>
+            <li>Party Look Make Up</li>
+            <li class="highlight">All Types of Makeup</li>
+          </ul>
+          <div class="svc-actions">
+            <a class="btn-wa2" href="https://wa.me/918610324361?text=Hello%20Poornima!%20I%27d%20like%20to%20book%20*Bridal%20Service*." target="_blank">💬 Book via WhatsApp</a>
+            <a class="btn-call2" href="tel:+918610324361">📞 Call to Book</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BEAUTY -->
+      <div class="svc-card">
+        <div class="svc-img">
+          <img src="https://4.imimg.com/data4/JC/AP/MY-25864212/advance-facial-like-o3-argan-oil-shahnaz-gold-diamond.jpg" alt="Facial Beauty">
+          <span class="svc-badge">Beauty</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title">✨ Beauty Service</div>
+          <ul class="svc-list">
+            <li>Golden Facial</li>
+            <li>Whitening Facial</li>
+            <li>Red Wine Facial</li>
+            <li class="highlight">All Types of Facial</li>
+          </ul>
+          <div class="svc-actions">
+            <a class="btn-wa2" href="https://wa.me/918610324361?text=Hello%20Poornima!%20I%27d%20like%20to%20book%20*Beauty%20Service*." target="_blank">💬 Book via WhatsApp</a>
+            <a class="btn-call2" href="tel:+918610324361">📞 Call to Book</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MEHANDI -->
+      <div class="svc-card">
+        <div class="svc-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN3wKiuSL_imEYV7VXSJBW6X2VbzG1mgqYwQ&s" alt="Mehandi Design">
+          <span class="svc-badge">Mehandi</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title">🌿 Mehandi</div>
+          <ul class="svc-list">
+            <li>Wedding Mehandi</li>
+            <li>Baby Shower Mehandi</li>
+            <li class="highlight">All Types of Mehandi</li>
+          </ul>
+          <div class="svc-actions">
+            <a class="btn-wa2" href="https://wa.me/918610324361?text=Hello%20Poornima!%20I%27d%20like%20to%20book%20*Mehandi*." target="_blank">💬 Book via WhatsApp</a>
+            <a class="btn-call2" href="tel:+918610324361">📞 Call to Book</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- HAIR -->
+      <div class="svc-card">
+        <div class="svc-img">
+          <img src="https://img.magnific.com/free-photo/barber-rsquo-s-hairstyling-women-rsquo-s-salon-jobs-career-campaign_53876-127192.jpg?semt=ais_hybrid&w=740&q=80" alt="Hair Styling">
+          <span class="svc-badge">Hair</span>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title">✂️ Hair Services</div>
+          <ul class="svc-list">
+            <li>Straight / U / V Cut</li>
+            <li>Feather Hair Cut</li>
+            <li>Hair Coloring</li>
+            <li>Henna</li>
+            <li class="highlight">All Types of Hair Cut</li>
+          </ul>
+          <div class="svc-actions">
+            <a class="btn-wa2" href="https://wa.me/918610324361?text=Hello%20Poornima!%20I%27d%20like%20to%20book%20*Hair%20Service*." target="_blank">💬 Book via WhatsApp</a>
+            <a class="btn-call2" href="tel:+918610324361">📞 Call to Book</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STRIP -->
+<div class="about-strip">
+  <div class="about-inner">
+    <div class="about-img-wrap">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD6oODx5_-FIj24OiuB2pjdIJGMt6jw74vDg&s" alt="Poornima Vignesh Makeover Artist">
+      <div class="about-img-badge">
+        <div class="about-badge-n">50+</div>
+        <div class="about-badge-l">Brides Served</div>
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="sec-label" style="color:var(--blush)">About the Artist</div>
+      <h2 class="sec-title">Poornima <em>Vignesh</em></h2>
+      <p class="sec-sub">4+ years transforming brides and beauty seekers across Anaimalai and beyond — with passion, precision and love.</p>
+      <div class="about-list">
+        <div class="about-list-item">Specialist in South Indian bridal makeup & looks</div>
+        <div class="about-list-item">Full service available at your home, hall, or venue</div>
+        <div class="about-list-item">Premium products for skin-safe, long-lasting results</div>
+        <div class="about-list-item">Rental jewellery & saree prepleating included</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SPECIALS -->
+<section id="specials" class="sec sec-specials">
+  <div class="sec-inner">
+    <div class="sec-label">Exclusive Add-ons</div>
+    <h2 class="sec-title">Beyond the <em>Basics</em></h2>
+    <p class="sec-sub">Signature offerings that complete every occasion beautifully.</p>
+    <div class="sp-grid">
+      <div class="sp-card">
+        <div class="sp-card-img">
+          <img src="https://prepleating.com/wp-content/uploads/2025/02/Laks_Saree_Pre_Pleating_040225_05.jpg" alt="Saree Draping">
+        </div>
+        <div class="sp-card-body">
+          <div class="sp-icon">🥻</div>
+          <h4>Saree Prepleating</h4>
+          <p>Professional neat draping ready for weddings & functions — affordable & elegant.</p>
+        </div>
+      </div>
+      <div class="sp-card">
+        <div class="sp-card-img">
+          <img src="https://swarnamforhire.com/wp-content/uploads/2018/05/IMG_8761.jpg" alt="Rental Jewellery">
+        </div>
+        <div class="sp-card-body">
+          <div class="sp-icon">💎</div>
+          <h4>Rental Jewel Sets</h4>
+          <p>Premium jewellery sets on rent — look like royalty without the purchase cost.</p>
+        </div>
+      </div>
+      <div class="sp-card">
+        <div class="sp-card-img">
+          <img src="https://content.jdmagicbox.com/comp/def_content/beauty-parlours/beauty-parlours-1-beauty-parlours-12-4pq8a.jpg" alt="Home Visit">
+        </div>
+        <div class="sp-card-body">
+          <div class="sp-icon">🚗</div>
+          <h4>Home & Venue Visits</h4>
+          <p>Full salon-quality setup delivered to your location — anywhere in the region.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISIT BANNER -->
+<div class="sec-visit">
+  <div class="visit-inner">
+    <div>
+      <h2>We Come <em>To You</em></h2>
+      <p>Don't step out — let Poornima Vignesh bring the full salon experience to your home, hall, or wedding venue with complete professional setup.</p>
+    </div>
+    <a href="https://wa.me/918610324361?text=Hello%20Poornima!%20I%27d%20like%20to%20book%20a%20*Home%20Visit*." target="_blank" class="btn-white">💬 Book a Home Visit</a>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="sec sec-contact">
+  <div class="sec-inner">
+    <div style="margin-bottom:3.5rem">
+      <div class="sec-label">Get in Touch</div>
+      <h2 class="sec-title">Contact <em>Us</em></h2>
+      <p class="sec-sub">Every button is live — tap to call, WhatsApp, find us on the map, or follow our work.</p>
+    </div>
+    <div class="c-grid">
+      <div class="c-card">
+        <div class="c-ico">📞</div>
+        <h4>Call Us</h4>
+        <p>+91 861 032 4361<br>+91 984 247 4648</p>
+        <a href="tel:+918610324361" class="c-btn cb-call">📞 Tap to Call</a>
+      </div>
+      <div class="c-card">
+        <div class="c-ico">💬</div>
+        <h4>WhatsApp</h4>
+        <p>Chat with Poornima directly on WhatsApp</p>
+        <a href="https://wa.me/918610324361?text=Hello%20Poornima!" target="_blank" class="c-btn cb-wa">💬 Open WhatsApp</a>
+      </div>
+      <div class="c-card">
+        <div class="c-ico">📍</div>
+        <h4>Location</h4>
+        <p>11, Masaniamman Kovil Street<br>Anaimalai – 642 104<br>Tamil Nadu</p>
+        <a href="https://www.google.com/maps/search/11+Masaniamman+Kovil+Street+Anaimalai+642104" target="_blank" class="c-btn cb-map">📍 Open Maps</a>
+      </div>
+      <div class="c-card">
+        <div class="c-ico">📸</div>
+        <h4>Instagram</h4>
+        <p>@honey_bunch_makeoverartist</p>
+        <a href="https://www.instagram.com/honey_bunch_makeoverartist?utm_source=qr&igsh=MWl0MGNoNmhzeWduOQ==" target="_blank" class="c-btn cb-ig">📸 Instagram</a>
+      </div>
+      <div class="c-card">
+        <div class="c-ico">👤</div>
+        <h4>Facebook</h4>
+        <p>poornima vignesh makeoverartist</p>
+        <a href="https://www.facebook.com/people/Poornima-Vignesh-Makeoverartist/100063656723902/" target="_blank" class="c-btn cb-fb">👤 Facebook</a>
+      </div>
+      <div class="c-card">
+        <div class="c-ico">▶️</div>
+        <h4>YouTube</h4>
+        <p>honey bunch makeover artist</p>
+        <a href="https://www.youtube.com/@honeybunchmakeoverartist" target="_blank" class="c-btn cb-yt">▶️ YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<div class="footer-cta">
+  <h2>Ready for Your<br><em>Transformation?</em></h2>
+  <p>Bridal, beauty, mehandi or beyond — we'd love to make you look stunning.</p>
+  <div class="footer-cta-btns">
+    <a href="https://wa.me/918610324361?text=Hello%20Poornima!%20I%27d%20like%20to%20book%20a%20service." target="_blank" class="btn-rose">💬 WhatsApp to Book</a>
+    <a href="tel:+918610324361" class="btn-ghost">📞 Call Us Now</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">🌸 Honey Bunch Makeover Artist</div>
+  <p>© 2025 · Poornima Vignesh · Anaimalai, Tamil Nadu · <a href="https://www.instagram.com/honey_bunch_makeoverartist?utm_source=qr&igsh=MWl0MGNoNmhzeWduOQ==" target="_blank">Instagram</a></p>
+</footer>
+
+</body>
+</html>
